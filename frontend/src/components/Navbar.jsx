@@ -20,7 +20,7 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="/generate-recipe"
+            to="/generate"
             className="text-gray-700 font-medium hover:text-green-600 transition"
           >
             Generate Recipe

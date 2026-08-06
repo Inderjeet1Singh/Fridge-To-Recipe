@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import Button from "./Button";
-import { ingredients } from "../data/response";
+import { useContext } from "react";
+import { DataContext } from "../context/DataContext";
 const IngredientPreview = () => {
+  const { ingredients } = useContext(DataContext);
   return (
     <section className="relative overflow-hidden py-5 ">
       <div className="absolute -top-20 left-0 w-72 h-72  blur-[120px] rounded-full opacity-40"></div>

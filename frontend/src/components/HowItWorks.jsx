@@ -1,6 +1,8 @@
-import { steps } from "../data/response.js";
+import { useContext } from "react";
+import { DataContext } from "../context/DataContext";
 
 const HowItWorks = () => {
+  const { steps } = useContext(DataContext);
   return (
     <section className="py-5 bg-white">
       <div className="max-w-7xl mx-auto px-6 ">
