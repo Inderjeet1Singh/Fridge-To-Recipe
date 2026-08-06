@@ -1,6 +1,9 @@
 import React from "react";
 import { Carrot, RefreshCcw } from "lucide-react";
-const SwapRecipe = ({ recipe }) => {
+const IngrendientsOfRecipe = ({ recipe, servings }) => {
+  const getScaledQuantity = (quantity) => {
+    return Number(((quantity * servings) / recipe.servings).toFixed(2));
+  };
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
       <div className="rounded-3xl border border-emerald-100 bg-gradient-to-br from-emerald-50 to-white p-6">
@@ -29,7 +32,8 @@ const SwapRecipe = ({ recipe }) => {
               </div>
 
               <span>
-                {item.quantity} {item.unit}
+                {getScaledQuantity(item.quantity)}
+                {item.unit}
               </span>
             </div>
           ))}
@@ -66,4 +70,4 @@ const SwapRecipe = ({ recipe }) => {
   );
 };
 
-export default SwapRecipe;
+export default IngrendientsOfRecipe;

@@ -47,103 +47,102 @@ export const DataProvider = ({ children }) => {
       bg: "bg-yellow-50",
     },
   ];
-  const sampleRecipes = [
-    {
-      id: 1,
-      name: "Creamy Tomato Pasta",
-      servings: 4,
+  //   {
+  //     id: 1,
+  //     name: "Creamy Tomato Pasta",
+  //     servings: 4,
 
-      ingredients: [
-        {
-          name: "Tomato",
-          quantity: 2,
-          unit: "pcs",
-        },
-        {
-          name: "Pasta",
-          quantity: 200,
-          unit: "g",
-        },
-        {
-          name: "Cheese",
-          quantity: 100,
-          unit: "g",
-        },
-        {
-          name: "Olive Oil",
-          quantity: 2,
-          unit: "tbsp",
-        },
-      ],
+  //     ingredients: [
+  //       {
+  //         name: "Tomato",
+  //         quantity: 2,
+  //         unit: "pcs",
+  //       },
+  //       {
+  //         name: "Pasta",
+  //         quantity: 200,
+  //         unit: "g",
+  //       },
+  //       {
+  //         name: "Cheese",
+  //         quantity: 100,
+  //         unit: "g",
+  //       },
+  //       {
+  //         name: "Olive Oil",
+  //         quantity: 2,
+  //         unit: "tbsp",
+  //       },
+  //     ],
 
-      swaps: [
-        {
-          from: "Milk",
-          to: "Almond Milk",
-        },
-        {
-          from: "Butter",
-          to: "Olive Oil",
-        },
-      ],
+  //     swaps: [
+  //       {
+  //         from: "Milk",
+  //         to: "Almond Milk",
+  //       },
+  //       {
+  //         from: "Butter",
+  //         to: "Olive Oil",
+  //       },
+  //     ],
 
-      steps: [
-        "Boil pasta until cooked.",
-        "Cook tomatoes in olive oil.",
-        "Mix pasta with sauce.",
-        "Top with cheese.",
-      ],
-    },
+  //     steps: [
+  //       "Boil pasta until cooked.",
+  //       "Cook tomatoes in olive oil.",
+  //       "Mix pasta with sauce.",
+  //       "Top with cheese.",
+  //     ],
+  //   },
 
-    {
-      id: 2,
-      name: "Vegetable Fried Rice",
-      servings: 3,
+  //   {
+  //     id: 2,
+  //     name: "Vegetable Fried Rice",
+  //     servings: 3,
 
-      ingredients: [
-        {
-          name: "Rice",
-          quantity: 2,
-          unit: "cups",
-        },
-        {
-          name: "Carrot",
-          quantity: 1,
-          unit: "pc",
-        },
-        {
-          name: "Capsicum",
-          quantity: 1,
-          unit: "pc",
-        },
-        {
-          name: "Soy Sauce",
-          quantity: 2,
-          unit: "tbsp",
-        },
-      ],
+  //     ingredients: [
+  //       {
+  //         name: "Rice",
+  //         quantity: 2,
+  //         unit: "cups",
+  //       },
+  //       {
+  //         name: "Carrot",
+  //         quantity: 1,
+  //         unit: "pc",
+  //       },
+  //       {
+  //         name: "Capsicum",
+  //         quantity: 1,
+  //         unit: "pc",
+  //       },
+  //       {
+  //         name: "Soy Sauce",
+  //         quantity: 2,
+  //         unit: "tbsp",
+  //       },
+  //     ],
 
-      swaps: [
-        {
-          from: "Soy Sauce",
-          to: "Tamari",
-        },
-        {
-          from: "Oil",
-          to: "Sesame Oil",
-        },
-      ],
+  //     swaps: [
+  //       {
+  //         from: "Soy Sauce",
+  //         to: "Tamari",
+  //       },
+  //       {
+  //         from: "Oil",
+  //         to: "Sesame Oil",
+  //       },
+  //     ],
 
-      steps: [
-        "Heat oil.",
-        "Cook vegetables.",
-        "Add rice.",
-        "Mix with soy sauce.",
-      ],
-    },
-  ];
+  //     steps: [
+  //       "Heat oil.",
+  //       "Cook vegetables.",
+  //       "Add rice.",
+  //       "Mix with soy sauce.",
+  //     ],
+  //   },
+  // ];
   return (
-    <DataContext.Provider value={{ sampleRecipes, steps, ingredients }}>
+    <DataContext.Provider value={{ steps, ingredients }}>
       {children}
     </DataContext.Provider>
   );

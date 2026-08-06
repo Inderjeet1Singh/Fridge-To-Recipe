@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { ChefHat, Users } from "lucide-react";
 import CookingSteps from "./CookingSteps";
-import SwapRecipe from "./SwapRecipe";
+import IngrendientsOfRecipe from "./IngredientsOfRecipe";
 const RecipeCards = ({ recipe }) => {
+  const [servings, setServings] = useState(recipe.servings);
+
+  const increaseServing = () => {
+    setServings((prev) => prev + 1);
+  };
+
+  const decreaseServing = () => {
+    if (servings > 1) {
+      setServings((prev) => prev - 1);
+    }
+  };
   return (
     <div
       key={recipe.id}
@@ -31,18 +42,24 @@ const RecipeCards = ({ recipe }) => {
 
             <span className="font-semibold text-slate-600">Servings</span>
 
-            <button className="w-9 h-9 rounded-full border border-slate-300 bg-white hover:bg-slate-100">
+            <button
+              onClick={decreaseServing}
+              className="w-9 h-9 rounded-full border border-slate-300 bg-white hover:bg-slate-100"
+            >
               -
             </button>
 
-            <span className="font-bold text-lg">{recipe.servings}</span>
+            <span className="font-bold text-lg">{servings}</span>
 
-            <button className="w-9 h-9 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white">
+            <button
+              onClick={increaseServing}
+              className="w-9 h-9 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white"
+            >
               +
             </button>
           </div>
         </div>
-        <SwapRecipe recipe={recipe} />
+        <IngrendientsOfRecipe recipe={recipe} servings={servings} />
         <CookingSteps recipe={recipe} />
       </div>
     </div>
